@@ -5,14 +5,14 @@ Win32AppUserNotification is a simple .Net Framework app that can be used to disp
 
 The notification can be displayed for Win32 apps in both SYSTEM and USER context and will display on top of other windows.
 
-##### Screenshots examples
+### Screenshot examples
 ![alt text](https://github.com/SMSAgentSoftware/Win32AppUserNotification/blob/main/Screenshots/ss1.png?raw=true)
 ![alt text](https://github.com/SMSAgentSoftware/Win32AppUserNotification/blob/main/Screenshots/ss2.png?raw=true)
 
-##### How to use
-Download the **Release** and package the **Win32AppUserNotification.exe** in the same directory as your PowerShell install wrapper script. Example wrapper scripts containing logic to call the notification can be found in the **Example wrapper scripts** folder. The notification wrapper code is different between USER and SYSTEM context installs. Populate the **Title** parameter (eg with the app name) and add the main notification text using the StringBuilder code.
+### How to use
+Download the **[Release](https://github.com/SMSAgentSoftware/Win32AppUserNotification/releases)** and package the **Win32AppUserNotification.exe** in the same directory as your PowerShell install wrapper script. Example wrapper scripts containing logic to call the notification can be found in the **Example wrapper scripts** folder. The notification wrapper code is different between USER and SYSTEM context installs. Populate the **Title** parameter (eg with the app name) and add the main notification text using the StringBuilder code.
 
-##### How it works
+### How it works
 You can pass two arguments to the notification executable - a **title** and some **text**. It is recommended to prepare the text using a .Net StringBuilder object to preserve line breaks, as demonstrated in the example script wrappers.
 
 When running in USER context, the process is straight forward - the notification text is prepared, the exe is called and a timeout is used to automatically close the notification after a defined period in case of no response from the user.
